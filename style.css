@@ -1,0 +1,145 @@
+:root {
+  --primary: #15a7a0;
+  --primary-dark: #10847e;
+  --bg: #f6fbfb;
+  --surface: #ffffff;
+  --text: #182226;
+  --muted: #526369;
+  --border: #dcebeb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #ffffff;
+  padding: 56px 0;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.18);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  opacity: 0.96;
+}
+
+.works {
+  padding: 48px 0 24px;
+}
+
+.works h2,
+.contact h2 {
+  font-size: 1.45rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.result {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.contact {
+  margin: 28px 0 56px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 10px;
+}
+
+.contact-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+}
